@@ -1,0 +1,16 @@
+# pass this exact code in sql query in you current database
+
+create database big_mart;
+
+use big_mart;
+
+select* from cleaned_bigmart limit 10;
+
+select count(*) from cleaned_bigmart;
+
+
+# this is option if facing privilege issue
+
+CREATE USER '<root_name>'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON big_mart.* TO '<root_name>'@'localhost';
+FLUSH PRIVILEGES;
